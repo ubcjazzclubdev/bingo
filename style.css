@@ -31,7 +31,7 @@ body {
     border: 2px solid black;
 }
 .bingo-label {
-    width: 100%;
+    width: 95%;
     height: 80%;
     text-align: center;
     background-color: rgba(0, 0, 0, .7);
@@ -45,14 +45,6 @@ body {
     background-color: rgba(0, 0, 0, .5);
 }
 .bingo-input, .bingo-input > input {
-    width: 100%;
+    width: 95%;
     box-sizing: border-box;
-}
-@media screen and (min-width: 1080px) {
-    .bingo-input > input {
-        font-size: 1.5em;
-    }
-    .bingo-label, .bingo-input {
-        width: 85%;
-    }
 }
