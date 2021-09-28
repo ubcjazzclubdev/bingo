@@ -44,6 +44,12 @@ body {
 .bingo-cell.filled .bingo-label {
     background-color: rgba(0, 0, 0, .5);
 }
+.bingo-cell.free .bingo-label {
+    background: none;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+}
 .bingo-input, .bingo-input > input {
     width: 95%;
     box-sizing: border-box;
