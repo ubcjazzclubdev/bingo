@@ -2,6 +2,7 @@ body {
     background-color: rgb(34, 34, 34);
     background-image: url("bingo_sheet.jpg");
     background-size: 100vw;
+    background-repeat: no-repeat;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #bingo-grid {
