@@ -18,7 +18,7 @@ body {
     grid-template-columns: 100%;
     justify-items: center;
     align-items: center;
-    border: 1px solid black;
+    box-sizing: border-box;
     color: white;
 }
 .bingo-cell.free {
@@ -27,6 +27,7 @@ body {
 }
 .bingo-cell.filled {
     background-color: #ffba00;
+    border: 2px solid black;
 }
 .bingo-label {
     width: 100%;
