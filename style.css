@@ -24,11 +24,15 @@
     width: 100%;
     box-sizing: border-box;
 }
+.bingo-input > input {
+    border: none;
+}
+.bingo-input {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
 @media screen and (min-width: 1080px) {
     .bingo-input > input {
         font-size: 1.5em;
-    }
-    .bingo-input {
-        width: 80%;
     }
 }
