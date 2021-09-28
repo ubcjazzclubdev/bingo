@@ -5,9 +5,10 @@
 }
 .bingo-cell {
     min-height: 125px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: 100%;
+    justify-items: center;
     align-items: center;
     border: 1px solid black;
 }
@@ -19,14 +20,15 @@
     width: 80%;
     text-align: center;
 }
-.bingo-input {
-    width: 80%;
-}
-.bingo-input > input {
+.bingo-input, .bingo-input > input {
     width: 100%;
+    box-sizing: border-box;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
     .bingo-input > input {
         font-size: 1.5em;
+    }
+    .bingo-input {
+        width: 80%;
     }
 }
