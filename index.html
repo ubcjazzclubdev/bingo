@@ -112,16 +112,34 @@
             </div>
         </div>
         <script type="text/javascript">
+            const storedValues = localStorage.getItem("jazz-club-bingo");
+            const values = (storedValues) ? JSON.parse(storedValues) : {};
+
+            for(let [key, value] of Object.entries(values)) {
+                for (const label of document.querySelectorAll(".bingo-label")) {
+                    if (label.textContent.includes(key)) {
+                        label.nextElementSibling.children[0].value = value;
+                        label.parentElement.classList.add("filled");
+                        break;
+                    }
+                }
+            }
+
             // Idea taken from https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
             document.getElementsByTagName("body")[0].addEventListener('focusout', event => {
                 if (!event.target.matches(".bingo-input > input")) {
                     return;
                 }
+                const name = event.target.parentElement.previousElementSibling.innerHTML;
+
                 if(event.target.value.length > 0) {
                     event.target.parentElement.parentElement.classList.add("filled");
+                    values[name] = event.target.value;
                 } else {
                     event.target.parentElement.parentElement.classList.remove("filled");
+                    delete values[name];
                 }
+                localStorage.setItem("jazz-club-bingo", JSON.stringify(values));
             });
         </script>
     </body>
