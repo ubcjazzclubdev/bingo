@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jazz Club Bingo</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="bingo-grid">
+            <!--ROW 1-->
+            <div class="bingo-cell">
+                <div class="bingo-label">thinks you’re cute</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">speaks more than 2 languages</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">has been to more than 4 countries</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">is in your faculty</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">plays more than two instruments</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <!--ROW 2-->
+            <div class="bingo-cell">
+                <div class="bingo-label">taking more than 5 courses</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">with more than one pet</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">hasn't attended any zoom lectures</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">is left-handed or ambidextrous</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">played in their high school jazz band</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <!--ROW 3-->
+            <div class="bingo-cell">
+                <div class="bingo-label">has gone skydiving or wants to</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">owns a Real Book</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">-FREE-</div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">shares a birthday month with you</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">sings</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <!--ROW 4-->
+            <div class="bingo-cell">
+                <div class="bingo-label">submitted to a spotlight or e-jam</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">plays the same instrument as you (vocals included!)</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">started learning an instrument in quarantine</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">had an 8am class today</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">is an exec (or used to be)</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <!--ROW 5-->
+            <div class="bingo-cell">
+                <div class="bingo-label">is watching the same streaming show as you</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">lives outside Vancouver</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">is at a Jazz Club event for the first time</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">doesn’t play an instrument</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+            <div class="bingo-cell">
+                <div class="bingo-label">is participating in UBC intramurals</div>
+                <div class="bingo-input"><input type="text" /></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // Idea taken from https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/
+            document.getElementsByTagName("body")[0].addEventListener('focusout', event => {
+                if (!event.target.matches(".bingo-input > input")) {
+                    return;
+                }
+                if(event.target.value.length > 0) {
+                    event.target.parentElement.parentElement.classList.add("filled");
+                } else {
+                    event.target.parentElement.parentElement.classList.remove("filled");
+                }
+            });
+        </script>
+    </body>
+</html>
